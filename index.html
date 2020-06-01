@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLE</title>
+    <link rel="stylesheet" href="./style/index.css">
+
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- nav -->
+    <nav>
+        <div class="MyContainer h-100">
+            <ul class="mobile-nav">
+                <li class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </li>
+                <li><a href="">
+                    <i class="fab fa-apple"></i>
+                    <span></span>
+                </a></li>
+                <li><a href="">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span></span>
+                </a></li>
+            </ul>
+
+            <ul class="nav-menu">
+                <li class="d-none d-md-block"><a href="">
+                    <i class="fab fa-apple"></i>
+                    <span></span>
+                </a></li>
+                <li><a href=""><span>Mac</span></a></li>
+                <li><a href=""><span>iPad</span></a></li>
+                <li><a href=""><span>iPhone</span></a></li>
+                <li><a href=""><span>Watch</span></a></li>
+                <li><a href=""><span>TV</span></a></li>
+                <li><a href=""><span>Music</span></a></li>
+                <li><a href=""><span>支援服務</span></a></li>
+                <li class="d-none d-md-block"><a href="">
+                    <i class="fas fa-search"></i>
+                    <span></span>
+                </a></li>
+                <li class="d-none d-md-block"><a href="">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span></span>
+                </a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- End nav -->
+
+    <!-- banner -->
+    <section id="banner">
+        <div class="text">
+            <span style="color: #bf4800;">全新</span>
+            <h2 class="headline">iPhone SE</h2>
+            <h3 class="subhead">
+                <span class="central">精彩不少，付出不多。</span>
+                <br>
+                NT$14,500 起
+            </h3>
+            <p style="color: #86868b;">
+                <span>折抵換購，NT$10,500 起</span>
+                <sup>1</sup>
+            </p>
+            <div class="links">
+                <a href="">進一步了解	&gt;</a>
+                <a href="">購買 &gt;</a>
+            </div>
+        </div>
+        <div class="img"></div>
+
+    </section>
+    <!-- End banner -->
+
+
+<!-- 以下為boostrap -->
+    <!-- jQuery slim版 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- jquery min版 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- End boostrap -->
+
+<script>
+    //nav效果：點擊漢堡條 選單由上往下長出來
+    var burger=document.querySelector('.burger')
+    var nav_menu = document.querySelector('.nav-menu')
+    var nav_menu_li =document.querySelectorAll('.nav-menu li')
+
+    burger.onclick = function () {
+        nav_menu.classList.toggle('active')
+
+        for (let index = 0; index < nav_menu_li.length; index++) {     //跑個for囘圈
+             const link = nav_menu_li[index];   //一個個拿出li
+
+             if(link.style.animation){         //判斷有沒有li的動畫
+                link.style.animation='';       //有的話  賦予空值 （類似tab分頁清除全部的用意）
+             }else{
+            link.style.animation = `fadeIn 0.5s ease forwards ${index/25+0.3}s`;   //否則（意：沒有的話）賦予動畫效果  （利用樣板字符加進去html中，并用index的值做運算，使li的延遲時間有層次的飛入）
+            }
+         }
+
+    }
+    
+
+    
+</script>
+</body>
+</html>
