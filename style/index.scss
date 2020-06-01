@@ -199,19 +199,18 @@ nav{
             width: 796px;
             height: 535px;
             background-size: 796px 535px;
-            background-image: url('../img/iPhone_1068px.jpg');
+            // background-image: url('../img/iPhone_1068px.jpg');
 
         }
     }
 }
 
-@media (max-width:768px){
-    #banner{
-        .text{
-            // margin-top: 48px;
-        }
-    }
-}
+// @media (max-width:768px){
+//     #banner{
+//         .text{
+//         }
+//     }
+// }
 
 @media (max-width:734px){
     #banner{
