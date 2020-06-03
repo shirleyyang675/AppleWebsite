@@ -121,6 +121,7 @@ nav{
     height: 736px;
 
     .text{
+        // position: relative;
         position: absolute;
         height: 50%;
         padding-top: 55px;
@@ -151,24 +152,35 @@ nav{
         .links{
             font-size: 21px;
 
-            a:nth-child(2){
-                margin-left: 26px;
+            a{
+                color: #06c;
+                &:nth-child(2){
+                    margin-left: 26px;
+                }
             }
         }
     }
 
-    .img{
+    .img-wrapper{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         bottom: 0;
         margin: auto;
-        width: 1156px;
-        height: 584px;
-        background-size: 1156px 584px;
-        background-image: url('../img/iphone.jpg');
-        background-repeat: no-repeat;
         z-index: 1;
+
+        .img{
+            width: 1156px;
+            height: 584px;
+            background-size: 1156px 584px;
+            background-image: url('../img/iphone.jpg');
+            background-repeat: no-repeat;
+            margin: auto;
+
+            // img{
+            //     width: 100%;
+            // }
+        }
         
     }
 }
@@ -176,8 +188,8 @@ nav{
 @media (max-width:1068px){
     #banner{
         .text{
-        padding-top: 65px;
-        top: 28%;
+            padding-top: 65px;
+            top: 28%;
 
         .headline{
             font-size: 44px;
@@ -195,12 +207,13 @@ nav{
 
         }
 
-        .img{
+        .img-wrapper{
+            .img{
             width: 796px;
             height: 535px;
             background-size: 796px 535px;
             // background-image: url('../img/iPhone_1068px.jpg');
-
+            }
         }
     }
 }
@@ -236,15 +249,316 @@ nav{
             }
         }
 
-        .img{
+        .img-wrapper{
+            .img{
             width: 346px;
             height: 326px;
             background-size: 346px 326px;
             background-image: url('../img/iPhone_734px.jpg');
+            }
         }
     }
 }
 
+
     
 
-// -- End nav --
+// -- End banner --
+
+
+// ========== banner-2 ==========
+#banner-2{
+    width: 100%;
+    height: 736px;
+    background-image: url('../img/banner_2_2618px.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-color: #fbfbfd;
+    position: relative;
+
+    .text{
+        text-align: center;
+        padding-top: 55px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .headline{
+            font-size: 56px;
+            letter-spacing: -1.5px;
+        }
+
+        .subhead{
+            font-size: 26px;
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 1.5211;
+            color: #1d1d1f;
+
+            .central{
+                padding-left: 0.4em;
+            }
+        }
+
+        p{
+            margin-bottom: unset;
+        }
+
+        .links{
+            font-size: 21px;
+            margin-top: .6em;
+
+            a{
+                color: #06c;
+                &:nth-child(2){
+                    margin-left: 26px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1068px){
+    #banner-2{
+        height: 694px;
+       
+
+        .text{
+            .headline{
+                font-size: 42px;
+            }
+
+            .subhead{
+                font-size: 22px;
+            }
+
+            .links{
+                font-size: 19px;
+            }
+        }
+    }   
+}
+
+@media (max-width:734px){
+    #banner-2{
+        height: 548px;
+        background-image: url('../img/banner_2_1068px.jpg');
+
+        .text{
+            .headline{
+                font-size: 32px;
+            }
+
+            .subhead{
+                font-size: 17px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+
+            .links{
+                font-size: 17px;
+                margin-top: .47em;
+            }
+        }
+    }
+}
+// -- End banner-2 --
+
+// ========== banner-3 ==========
+#banner-3{
+    width: 100%;
+    height: 736px;
+    position: relative;
+    background-image: url('../img/banner_3.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
+    background-color: #fafafa;
+
+    .text{
+        text-align: center;
+        padding-top: 55px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .headline{
+            font-size: 56px;
+            font-weight: 500;
+        }
+
+        .subhead{
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .links{
+            font-size: 20px;
+            margin-top: .6em;
+
+            a{
+                color: #06c;
+                &:nth-child(2){
+                    margin-left: 26px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1068px){
+    #banner-3{
+        height: 694px;
+        background-image: url('../img/banner_3_1068px.jpg');
+        background-size: unset;
+
+        .text{
+            padding-top: 65px;
+
+            .headline{
+                font-size: 44px;
+                font-weight: 600;
+            }
+
+            .subhead{
+                font-size: 22px;
+                font-weight: 100;
+            }
+
+        }
+    }
+}
+
+@media (max-width:734px){
+    #banner-3{
+        height: 548px;
+        background-image: url('../img/banner_3_734px.jpg');
+
+        .text{
+            .headline{
+                font-size: 31px;
+                font-weight: 600;
+            }
+
+            .subhead{
+                font-size: 18px;
+            }
+
+            .links{
+                font-size: 18px;
+            }
+        }
+    }
+}
+// -- End banner-3 --
+
+// ========== products ==========
+#products{
+
+    .img-wrapper-1{
+        height: 624px;
+        background-image: url('../img/products_1.jpg');
+        background-position-x: center;
+        background-position-y: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #f5f5f7;
+
+        .text{
+            padding-top: 52px;
+            text-align: center;
+
+            .headline{
+                font-size: 40px;
+            }
+
+            .subhead{
+                font-size: 21px;
+            }
+
+            .links{
+                a{
+                    color: #06c;
+                    &:nth-child(2){
+                        margin-left: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    .img-wrapper-2{
+        height: 624px;
+        background-image: url('../img/products_2.jpg');
+        background-position-x: center;
+        background-position-y: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-color: black;
+        color: #f5f5f7;
+
+        .text{
+            padding-top: 52px;
+            text-align: center;
+
+            .headline{
+                font-size: 40px;
+            }
+
+            .subhead{
+                font-weight: 100;
+                margin-top: .7em;
+            }
+        }
+    }
+}
+
+@media (max-width:1068px){
+    #products{
+        .img-wrapper-1{
+            height: 534px;
+            background-image: url('../img/products_1_1068px.jpg');
+        
+            .text{
+                .headline{
+                    font-size: 32px;
+                }
+
+                .subhead{
+                    font-size: 19px;
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .img-wrapper-2{
+            height: 534px;
+            background-image: url('../img/products_2_1068px.jpg');
+            background-size: 90%;
+
+            .text{
+                .headline{
+                    font-size: 32px;
+                }
+
+                .subhead{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .img-wrapper-2{
+        background-size: 100%;
+    }
+}
+// -- End products --

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* #banner-2{
+            width: 100%;
+            height: 736px;
+            position: relative;
+            background-image: url('../img/banner_2_1068px.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .text{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+        } */
+
+        #banner-2{
+            width: 100%;
+            height: 736px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: aliceblue;
+        }
+
+        .text{
+            position: relative;
+            z-index: 4;
+            text-align: center;
+        }
+     
+        .img-wrapper{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .img{
+            width: 2618px;
+            height: 538px;
+            background-size: 2618px 538px;
+            background-repeat: no-repeat;
+            background-image: url('../img/banner_2_2618px.jpg');
+
+            z-index: 1;
+    position: absolute;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    left: calc(50% + 0px);
+    right: auto;
+    bottom: 0px;
+    top: auto;
+    -webkit-transform: translatex(-50%);
+    transform: translatex(-50%);
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="banner-2">
+        <div class="text">
+            <h2 class="headline">iPhone 11</h2>
+            <h3 class="subhead">樣樣行，剛剛好。</h3>
+            <p style="color: #86868b;">
+                <span>折抵換購，NT$19,400 起</span>
+                <sup>1</sup>
+            </p>
+            <div class="links">
+                <a href="">進一步了解 &gt;</a>
+                <a href="">購買 &gt;</a>
+            </div>
+            
+        </div>
+
+        <div class="img-wrapper">
+            <div class="img"></div>
+        </div>
+       
+    </section>
+</body>
+</html>
