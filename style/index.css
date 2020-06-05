@@ -805,6 +805,12 @@ nav .MyContainer ul.mobile-nav .burger div {
   display: block;
 }
 
+#footer .copyright {
+  text-align: center;
+  margin: 50px 0 20px 0;
+  font-size: 12px;
+}
+
 @media (max-width: 767px) {
   #footer {
     padding: 0 16px;
